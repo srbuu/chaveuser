@@ -15,7 +15,7 @@ echo "2. EN"
 
 echo "3. ES"
 
-echo? "4. Script Exit"
+echo "4. Script Exit"
 
 echo ""
 
