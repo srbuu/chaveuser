@@ -1,0 +1,171 @@
+#!/bin/bash
+clear
+
+tput setaf 2 ; tput bold ; echo "SSH-KEY: ROOT - Script By @MajinBoo" ; tput sgr0
+echo ""
+echo "$(tput bold) Select Language Script: $(tput sgr0)"
+
+echo ""
+
+echo "1. PT-BR"
+
+echo "2. EN"
+
+echo "3. ES"
+echo ""
+echo "0. Exit The Script"
+
+echo ""
+
+echo -n "What is the option? "
+
+read opcao
+
+case $opcao in
+
+1)
+clear
+echo "$(tput bold) GERADOR DE CHAVE PUBLICA NO USUARIO ROOT. Script By @MajinBoo $(tput sgr0)"
+
+rm -rf /root/id_rsa 1>/dev/null 2>/dev/null 
+rm -rf /root/id_rsa.pub 1>/dev/null 2>/dev/null 
+rm -rf /root/.ssh 1>/dev/null 2>/dev/null 
+
+
+mkdir /root/.ssh 1>/dev/null 2>/dev/null 
+
+sleep 2
+echo ""
+echo "$(tput bold) Coloque Uma Senha no Passphrase! $(tput sgr0)"
+sleep 2
+echo ""
+ssh-keygen -t rsa -b 4096 -f id_rsa
+
+cat /root/id_rsa.pub >> /root/.ssh/id_rsa.pub
+
+cat /root/id_rsa >> /root/.ssh/id_rsa
+
+cat /root/id_rsa.pub >> /root/.ssh/authorized_keys
+
+chmod 700 /root/.ssh 1>/dev/null 2>/dev/null
+
+chmod 600 /root/.ssh/authorized_keys 1>/dev/null 2>/dev/null
+
+sleep 3
+
+echo "$(tput bold) Chave Publica e Privada, Copie a Chave Abaixo e Use No Terminal Com Passphrase. $(tput sgr0)"
+sleep 2
+
+rm -rf /root/id_rsa 1>/dev/null 2>/dev/null 
+rm -rf /root/id_rsa.pub 1>/dev/null 2>/dev/null 
+echo ""
+echo ""
+
+cat /root/.ssh/id_rsa
+
+echo "" 
+sleep 4
+echo "$(tput bold) Chave Gerada Com Sucesso. Script By @MajinBoo $(tput sgr0)"
+
+;;
+2)
+clear
+echo "$(tput bold) GENERATOR PUBLIC KEY ON THE ROOT USER. Script By @MajinBoo $(tput sgr0)"
+
+rm -rf /root/id_rsa 1>/dev/null 2>/dev/null 
+rm -rf /root/id_rsa.pub 1>/dev/null 2>/dev/null 
+rm -rf /root/.ssh 1>/dev/null 2>/dev/null 
+
+
+mkdir /root/.ssh 1>/dev/null 2>/dev/null 
+
+sleep 2
+echo ""
+echo "$(tput bold) Put A Password in the Passphrase.! $(tput sgr0)"
+sleep 2
+echo ""
+ssh-keygen -t rsa -b 4096 -f id_rsa
+
+cat /root/id_rsa.pub >> /root/.ssh/id_rsa.pub
+
+cat /root/id_rsa >> /root/.ssh/id_rsa
+
+cat /root/id_rsa.pub >> /root/.ssh/authorized_keys
+
+chmod 700 /root/.ssh 1>/dev/null 2>/dev/null
+
+chmod 600 /root/.ssh/authorized_keys 1>/dev/null 2>/dev/null
+
+sleep 3
+
+echo "$(tput bold) Key public and Private, Copy the Key Below and Use it In the Terminal With Passphrase. $(tput sgr0)"
+sleep 2
+
+rm -rf /root/id_rsa 1>/dev/null 2>/dev/null 
+rm -rf /root/id_rsa.pub 1>/dev/null 2>/dev/null 
+
+echo ""
+echo ""
+
+cat /root/.ssh/id_rsa
+
+echo "" 
+sleep 4
+echo "$(tput bold) Public key generated with success. Script By @MajinBoo $(tput sgr0)"
+
+
+;;
+
+3)
+clear
+echo "$(tput bold) GENERADOR DE CLAVE PUBLICA EN EL USUARIO ROOT. Script By @MajinBoo $(tput sgr0)"
+
+rm -rf /root/id_rsa 1>/dev/null 2>/dev/null 
+rm -rf /root/id_rsa.pub 1>/dev/null 2>/dev/null 
+rm -rf /root/.ssh 1>/dev/null 2>/dev/null 
+
+
+mkdir /root/.ssh 1>/dev/null 2>/dev/null 
+
+sleep 2
+echo ""
+echo "$(tput bold) Coloque Una Contraseña en el Passphrase! $(tput sgr0)"
+sleep 2
+echo ""
+ssh-keygen -t rsa -b 4096 -f id_rsa
+
+cat /root/id_rsa.pub >> /root/.ssh/id_rsa.pub
+
+cat /root/id_rsa >> /root/.ssh/id_rsa
+
+cat /root/id_rsa.pub >> /root/.ssh/authorized_keys
+
+chmod 700 /root/.ssh 1>/dev/null 2>/dev/null
+
+chmod 600 /root/.ssh/authorized_keys 1>/dev/null 2>/dev/null
+
+sleep 3
+
+echo "$(tput bold) Clave Publica y Privada, Copie la Clave de Abajo y Utilice El Terminal Con Passphrase. $(tput sgr0)"
+sleep 2
+
+rm -rf /root/id_rsa 1>/dev/null 2>/dev/null 
+rm -rf /root/id_rsa.pub 1>/dev/null 2>/dev/null 
+
+echo ""
+echo ""
+
+cat /root/.ssh/id_rsa
+
+echo "" 
+sleep 4
+echo "$(tput bold) Clave pública generada con éxito. Script By @MajinBoo $(tput sgr0)"
+
+;;
+
+0)
+clear
+echo "Coming out of the Script..."
+exit
+;;
+esac
