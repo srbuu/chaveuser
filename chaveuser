@@ -135,7 +135,7 @@ chown -R $nome:$nome /home/$nome/.ssh 1>/dev/null 2>/dev/null
 
 sleep 1
 clear
-echo "$(tput bold) $nome $nome Copy the Key Below!  $(tput sgr0)"
+echo "$(tput bold) $nome Copy the Key Below!  $(tput sgr0)"
 echo "$(tput bold) Paste In the Http Injector or KPN, the Public Key and Use it Without the Need of the Password for SSH $(tput sgr0)"
 sleep 2
 
