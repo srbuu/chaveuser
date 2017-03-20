@@ -2,7 +2,7 @@ Script to generate the Public and Private Key in a user on your distribution.
 
 #chaveuser 
 
-wgetwget -O /bin/chaveuser raw.githubusercontent.com/srbuu/sshkey/master/chaveuser
+wget -O /bin/chaveuser raw.githubusercontent.com/srbuu/sshkey/master/chaveuser
 
 chmod +x /bin/chaveuser
 
